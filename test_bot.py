@@ -143,8 +143,7 @@ def test_bot_components():
     except Exception as e:
         print(f"❌ Error testing components: {e}")
         return False
-
-def test_telegram_connection():
+async def test_telegram_connection():
     """Test Telegram bot connection"""
     print("\n🧪 Testing Telegram connection...")
     
