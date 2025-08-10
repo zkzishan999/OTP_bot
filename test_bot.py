@@ -6,6 +6,8 @@ Test script to verify bot components work correctly
 import sys
 import os
 from datetime import datetime
+import asyncio
+from telegram import Bot
 
 def test_imports():
     """Test if all required modules can be imported"""
@@ -159,7 +161,7 @@ def test_telegram_connection():
         bot = Bot(token=bot_token)
         
         # Test bot info
-        bot_info = bot.get_me()
+        bot_info = await bot.get_me()
         print(f"✅ Connected to bot: @{bot_info.username}")
         return True
         
