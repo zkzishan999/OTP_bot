@@ -12,7 +12,7 @@ class IVASMSScraper:
         self.email = email
         self.password = password
         self.session = requests.Session()
-        self.base_url = "https://www.ivasms.com"
+        self.base_url = "https://www.ivasms.com/portal"
         self.is_logged_in = False
         
         # Set headers to mimic a real browser
@@ -90,8 +90,8 @@ class IVASMSScraper:
             possible_paths = [
                 '/messages',
                 '/sms',
-                '/history',
-                '/dashboard',
+                '/live/my_sms',
+                '/sms/received',
                 '/account',
                 '/numbers'
             ]
