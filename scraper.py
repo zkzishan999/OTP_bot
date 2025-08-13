@@ -12,7 +12,7 @@ class IVASMSScraper:
         self.email = email
         self.password = password
         self.session = requests.Session()
-        self.base_url = "https://www.ivasms.com/portal"
+        self.base_url = "https://www.ivasms.com"
         self.is_logged_in = False
         
         # Set headers to mimic a real browser
